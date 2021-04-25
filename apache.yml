@@ -1,0 +1,14 @@
+---
+ - hosts: localhost 
+   become: yes
+   become_method: sudo 
+   become_flags: -s
+   become_user: root 
+   tasks:
+   - name: Install Apache
+     apt:
+       name: apache2
+       state: present
+       update_cache: true 
+
+     #apt: name=apache2 state=present update_cache=yes

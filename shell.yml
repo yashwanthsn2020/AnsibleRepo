@@ -1,0 +1,12 @@
+---
+ - hosts: localhost 
+
+   tasks:
+   - name: Execute shell command
+     shell: |
+       pwd
+       ls
+       df -h
+
+   - name: Execute shell script
+     shell: /home/ansible/Desktop//Ansible/shell.sh       

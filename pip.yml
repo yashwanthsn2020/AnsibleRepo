@@ -1,0 +1,7 @@
+---
+ - hosts: localhost 
+   
+   tasks:
+   - name: Execute shell command
+     shell: |
+       pip install --upgrade pip

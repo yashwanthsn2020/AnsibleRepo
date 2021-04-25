@@ -1,0 +1,14 @@
+---
+ - hosts: localhost 
+   become: yes
+   become_method: sudo 
+   become_flags: -s
+   become_user: root 
+   tasks:
+   - name: Install Docker 
+     apt:
+       name: docker.io 
+       state: present
+       update_cache: true 
+
+     #apt: name=docker.io state=present update_cache=yes
